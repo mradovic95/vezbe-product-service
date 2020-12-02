@@ -11,6 +11,7 @@ public class Comment {
     private Long id;
     private String text;
     private String user;
+    @Column(name = "product_rating")
     private Integer productRating;
     @ManyToOne
     private Product product;

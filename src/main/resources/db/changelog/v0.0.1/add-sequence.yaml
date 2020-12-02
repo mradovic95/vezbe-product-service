@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - property:
+      name: "schema"
+      value: ${database.defaultSchemaName}
+  - changeSet:
+      id: add-sequence
+      author: mradovic01011111@gmail.com
+      changes:
+        - createSequence:
+            incrementBy: 1
+            schemaName: public
+            sequenceName: hibernate_sequence
+            minValue: 0
+            startValue: 1
