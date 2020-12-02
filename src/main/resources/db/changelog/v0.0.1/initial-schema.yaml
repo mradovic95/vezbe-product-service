@@ -27,6 +27,11 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
+                  name: price
+                  type: decimal
+                  constraints:
+                    nullable: false
+              - column:
                   name: created_date
                   type: timestamp
                   constraints:
@@ -52,6 +57,16 @@ databaseChangeLog:
               - column:
                   name: text
                   type: varchar(1024)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_rating
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user
+                  type: varchar(64)
                   constraints:
                     nullable: false
               - column:
