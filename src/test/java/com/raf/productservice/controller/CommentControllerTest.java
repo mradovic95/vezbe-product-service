@@ -39,6 +39,7 @@ public class CommentControllerTest {
 
     @BeforeEach
     public void setUp() {
+        productRepository.deleteAll();
         commentRepository.deleteAll();
     }
 
@@ -83,7 +84,7 @@ public class CommentControllerTest {
         //given
         Product product = createTestProduct("product1", "prodcut1 description", BigDecimal.TEN);
         productRepository.save(product);
-        CommentCreateDto commentCreateDto = createTestCommentCreateDto("text", "user", 10);
+        CommentCreateDto commentCreateDto = createTestCommentCreateDto("text", "user", 5);
         HttpEntity<CommentCreateDto> request = new HttpEntity<>(commentCreateDto);
         //when
         ResponseEntity<CommentDto> response = testRestTemplate

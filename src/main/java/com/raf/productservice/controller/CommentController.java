@@ -40,7 +40,7 @@ public class CommentController {
 
     @PostMapping
     public ResponseEntity<CommentDto> add(@PathVariable("id") Long id, @RequestBody @Valid CommentCreateDto commentCreateDto) {
-        return new ResponseEntity<>(commentService.addCommentOnProduct(id, commentCreateDto), HttpStatus.OK);
+        return new ResponseEntity<>(commentService.addCommentOnProduct(id, commentCreateDto), HttpStatus.CREATED);
     }
 
 }
